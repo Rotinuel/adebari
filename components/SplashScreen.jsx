@@ -5,10 +5,10 @@ import { useEffect, useState, useRef } from "react";
 export default function SplashScreen({ onFinish } = {}) {
   const segments = [
     { text: "Adebari ", className: "text-[#ffbb00]" },
-    { text: "Konsult", className: "text-[#08465c]" },
+    { text: "Konsults", className: "text-[#08465c]" },
   ];
 
-  const typingSpeed = 55; // ms per char (adjust for realism)
+  const typingSpeed = 75; // ms per char (adjust for realism)
   const pauseAfterTyping = 800; // ms before bounce starts
   const fadeDelay = 700; // ms after bounce before fade
   const fadeDuration = 600; // ms fade out duration
