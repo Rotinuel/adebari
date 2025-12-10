@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 import SplashScreen from "@/components/SplashScreen"
+import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/Hero";
 
 
@@ -34,9 +34,9 @@ export default function Home() {
   return (
     <>
       {!loaded && <SplashScreen onFinish={() => setLoaded(true)} />}
-         <div className="flex bg-zinc-50 dark:bg-black">
-      {/* <ContactPage /> */}
-      <HeroSection />
+         <div className="flex flex-col bg-zinc-50 dark:bg-black">
+          <Navbar />
+          <HeroSection />
     </div>
     </>
    
