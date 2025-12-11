@@ -11,6 +11,7 @@ const LoadDB = async () => {
 LoadDB();
 
 
+
 export async function GET(req) {
     return NextResponse.json({ msg: "Api working" })
 }
@@ -20,8 +21,20 @@ export async function POST(req) {
     const timestamp = Date.now();
 
     const image = formData.get('image');
+
+    // SAFETY CHECK: ensure image is a File
+    if (!image || typeof image.arrayBuffer !== "function") {
+        console.log("Received image:", image);
+        return NextResponse.json(
+            { error: "Invalid image. Must upload a real file." },
+            { status: 400 }
+        );
+    }
+
+    // Convert File to buffer
     const imageByteData = await image.arrayBuffer();
     const buffer = Buffer.from(imageByteData);
+
     const path = `./public/${timestamp}_${image.name}`;
     await writeFile(path, buffer);
     const imgUrl = `/${timestamp}_${image.name}`
@@ -36,6 +49,7 @@ export async function POST(req) {
         authorImg: `${formData.get('authorImg')}`,
     }
 
+    
     await BlogModel.create(blogData);
     console.log("Blog saved")
 
