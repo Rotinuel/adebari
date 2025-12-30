@@ -67,14 +67,14 @@ export default function Footer() {
                 href="mailto:info@yourdomain.com"
                 className="hover:text-white"
               >
-                info@yourdomain.com
+                info@adebarikonsults.com
               </Link>
             </p>
 
             <p className="text-sm">
               Phone:{" "}
-              <Link href="tel:+1234567890" className="hover:text-white">
-                +1 (234) 567-890
+              <Link href="tel:+2349056329716" className="hover:text-white">
+                (234)905-632-9716
               </Link>
             </p>
           </div>

@@ -1,3 +1,124 @@
+// "use client";
+
+// import Image from "next/image";
+// import Link from "next/link";
+// import { CheckCircle, Phone, ArrowRight, Briefcase, Building2 } from "lucide-react";
+
+// export default function HeroSection() {
+//   return (
+//     <div className="relative w-full h-screen bg-gray-900 text-white">
+
+//       {/* Background Image */}
+//       <div className="absolute inset-0">
+//         <Image
+//           src="/blurry.png"
+//           alt="Construction Company"
+//           fill
+//           priority
+//           className="object-cover object-center opacity-90"
+//         />
+//       </div>
+
+//       {/* Dark Overlay */}
+//       <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]" />
+
+//       {/* Content */}
+//       <div className="relative z-10 max-w-7xl mx-auto px-6 h-full flex flex-col justify-center">
+        
+//         {/* Label */}
+//         <div className="flex items-center gap-3 mb-6">
+//           <div className="w-10 h-0.5 bg-[#55a630]" />
+//           <span className="uppercase tracking-widest text-sm text-gray-300 mt-48">
+//             Building Excellence Since 1998
+//           </span>
+//         </div>
+
+//         {/* Main Heading */}
+//         <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight max-w-3xl sm:mt-12 mt-48">
+//           Engineering <span className="text-[#55a630]">Future-Proof</span> Structures  
+//           That Stand The Test of Time
+//         </h1>
+
+//         {/* Subtext */}
+//         <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mt-6">
+//           We design, build, and deliver world-class construction projects across residential, 
+//           commercial, civil, and industrial sectors — with unmatched precision, safety, and innovation.
+//         </p>
+
+//         {/* CTA Buttons */}
+//         <div className="mt-6 flex flex-wrap gap-4">
+//           <Link
+//             href="/projects"
+//             className="px-8 py-4 bg-[#55a630] text-white rounded-lg text-lg font-semibold flex items-center gap-2 hover:bg-[#4b952c] transition"
+//           >
+//             View Our Projects <ArrowRight size={22} />
+//           </Link>
+
+//           <Link
+//             href="/contact"
+//             className="px-8 py-4 bg-white/10 backdrop-blur border border-white/20 rounded-lg text-lg font-semibold hover:bg-white/20 transition flex items-center gap-2"
+//           >
+//             Get a Quote <Phone size={20} />
+//           </Link>
+//         </div>
+
+//         {/* Hero Features / Highlights */}
+//         <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-8">
+
+//           <div className="flex items-start gap-4">
+//             <CheckCircle className="text-[#55a630]" size={32} />
+//             <div>
+//               <h4 className="text-xl font-semibold">Quality & Durability</h4>
+//               <p className="text-gray-300 text-sm">
+//                 Every project follows global construction standards ensuring lasting value.
+//               </p>
+//             </div>
+//           </div>
+
+//           <div className="flex items-start gap-4">
+//             <Briefcase className="text-[#55a630]" size={32} />
+//             <div>
+//               <h4 className="text-xl font-semibold">Skilled Professionals</h4>
+//               <p className="text-gray-300 text-sm">
+//                 Our team is made of licensed engineers, architects, and certified builders.
+//               </p>
+//             </div>
+//           </div>
+
+//           <div className="flex items-start gap-4">
+//             <Building2 className="text-[#55a630]" size={32} />
+//             <div>
+//               <h4 className="text-xl font-semibold">End-to-End Solutions</h4>
+//               <p className="text-gray-300 text-sm">
+//                 From blueprint to finishing — we handle the entire process seamlessly.
+//               </p>
+//             </div>
+//           </div>
+
+//         </div>
+
+//         {/* Stats Section */}
+//         <div className="mt-16 flex flex-wrap gap-10">
+//           <div>
+//             <h2 className="text-4xl font-bold">25+</h2>
+//             <p className="text-gray-300">Years of Experience</p>
+//           </div>
+//           <div>
+//             <h2 className="text-4xl font-bold">500+</h2>
+//             <p className="text-gray-300">Completed Projects</p>
+//           </div>
+//           <div>
+//             <h2 className="text-4xl font-bold">150+</h2>
+//             <p className="text-gray-300">Industry Experts</p>
+//           </div>
+//         </div>
+
+//       </div>
+//     </div>
+//   );
+// }
+
+
 "use client";
 
 import Image from "next/image";
@@ -6,47 +127,47 @@ import { CheckCircle, Phone, ArrowRight, Briefcase, Building2 } from "lucide-rea
 
 export default function HeroSection() {
   return (
-    <div className="relative w-full h-screen bg-gray-900 text-white">
+    <div className="relative w-full min-h-screen bg-gray-900 text-white flex flex-col">
 
       {/* Background Image */}
-      {/* <div className="absolute inset-0">
+      <div className="absolute inset-0">
         <Image
           src="/blurry.png"
           alt="Construction Company"
           fill
           priority
-          className="object-cover object-center opacity-90"
+          className="object-cover object-center opacity-70"
         />
-      </div> */}
+      </div>
 
       {/* Dark Overlay */}
-      {/* <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]" /> */}
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]" />
 
       {/* Content */}
-      {/* <div className="relative z-10 max-w-7xl mx-auto px-6 h-full flex flex-col justify-center"> */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 flex-grow flex flex-col justify-center">
         
         {/* Label */}
-        {/* <div className="flex items-center gap-3 mb-6">
+        <div className="flex items-center gap-3 mb-6">
           <div className="w-10 h-0.5 bg-[#55a630]" />
-          <span className="uppercase tracking-widest text-sm text-gray-300 mt-48">
+          <span className="uppercase tracking-widest text-sm text-gray-300">
             Building Excellence Since 1998
           </span>
-        </div> */}
+        </div>
 
         {/* Main Heading */}
-        {/* <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight max-w-3xl sm:mt-12 mt-48">
+        <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight max-w-4xl">
           Engineering <span className="text-[#55a630]">Future-Proof</span> Structures  
           That Stand The Test of Time
-        </h1> */}
+        </h1>
 
         {/* Subtext */}
-        {/* <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mt-6">
+        <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mt-6">
           We design, build, and deliver world-class construction projects across residential, 
-          commercial, civil, and industrial sectors — with unmatched precision, safety, and innovation.
-        </p> */}
+          commercial, civil, and industrial sectors.
+        </p>
 
         {/* CTA Buttons */}
-        {/* <div className="mt-6 flex flex-wrap gap-4">
+        <div className="mt-10 flex flex-wrap gap-4">
           <Link
             href="/projects"
             className="px-8 py-4 bg-[#55a630] text-white rounded-lg text-lg font-semibold flex items-center gap-2 hover:bg-[#4b952c] transition"
@@ -60,60 +181,56 @@ export default function HeroSection() {
           >
             Get a Quote <Phone size={20} />
           </Link>
-        </div> */}
-
-        {/* Hero Features / Highlights */}
-        {/* <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-8">
-
-          <div className="flex items-start gap-4">
-            <CheckCircle className="text-[#55a630]" size={32} />
-            <div>
-              <h4 className="text-xl font-semibold">Quality & Durability</h4>
-              <p className="text-gray-300 text-sm">
-                Every project follows global construction standards ensuring lasting value.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex items-start gap-4">
-            <Briefcase className="text-[#55a630]" size={32} />
-            <div>
-              <h4 className="text-xl font-semibold">Skilled Professionals</h4>
-              <p className="text-gray-300 text-sm">
-                Our team is made of licensed engineers, architects, and certified builders.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex items-start gap-4">
-            <Building2 className="text-[#55a630]" size={32} />
-            <div>
-              <h4 className="text-xl font-semibold">End-to-End Solutions</h4>
-              <p className="text-gray-300 text-sm">
-                From blueprint to finishing — we handle the entire process seamlessly.
-              </p>
-            </div>
-          </div>
-
-        </div> */}
-
-        {/* Stats Section */}
-        {/* <div className="mt-16 flex flex-wrap gap-10">
-          <div>
-            <h2 className="text-4xl font-bold">25+</h2>
-            <p className="text-gray-300">Years of Experience</p>
-          </div>
-          <div>
-            <h2 className="text-4xl font-bold">500+</h2>
-            <p className="text-gray-300">Completed Projects</p>
-          </div>
-          <div>
-            <h2 className="text-4xl font-bold">150+</h2>
-            <p className="text-gray-300">Industry Experts</p>
-          </div>
         </div>
 
-      </div> */}
+        {/* Features */}
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <FeatureItem 
+            icon={<CheckCircle className="text-[#55a630]" size={32} />}
+            title="Quality & Durability"
+            desc="Every project follows global construction standards ensuring lasting value."
+          />
+          <FeatureItem 
+            icon={<Briefcase className="text-[#55a630]" size={32} />}
+            title="Skilled Professionals"
+            desc="Our team is made of licensed engineers and certified builders."
+          />
+          <FeatureItem 
+            icon={<Building2 className="text-[#55a630]" size={32} />}
+            title="End-to-End Solutions"
+            desc="From blueprint to finishing — we handle the entire process."
+          />
+        </div>
+
+        {/* Stats Section */}
+        <div className="mt-16 pt-8 border-t border-white/10 flex flex-wrap gap-12">
+          <Stat number="25+" label="Years of Experience" />
+          <Stat number="500+" label="Completed Projects" />
+          <Stat number="150+" label="Industry Experts" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// Fixed Helper Components (No TypeScript types)
+function FeatureItem({ icon, title, desc }) {
+  return (
+    <div className="flex items-start gap-4">
+      {icon}
+      <div>
+        <h4 className="text-xl font-semibold">{title}</h4>
+        <p className="text-gray-400 text-sm mt-1">{desc}</p>
+      </div>
+    </div>
+  );
+}
+
+function Stat({ number, label }) {
+  return (
+    <div>
+      <h2 className="text-4xl font-bold text-[#55a630]">{number}</h2>
+      <p className="text-gray-400 text-sm">{label}</p>
     </div>
   );
 }

@@ -1,36 +1,37 @@
 'use client'
 
-import { assets, blog_data } from '@/assets/assets'
+import { assets } from '@/assets/assets'
 import Image from 'next/image'
+import axios from 'axios'
 import { useParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
-export default function Page() {
+const page =({  }) => {
     const params = useParams()
     const [data, setData] = useState(null)
 
+    const fetchBlogData = async () => {
+        const res = await axios.get('/api/blog',{
+            params: {
+                id:params.id
+            }
+        })
+        setData(res.data);
+    }
+
     useEffect(() => {
-        if (!params?.id) return
-
-        const id = Array.isArray(params.id)
-            ? Number(params.id[0])
-            : Number(params.id)
-
-        const blog = blog_data.find(item => item.id === id)
-
-        setData(blog || null)
-    }, [params])
-
-    if (!data) return <div className="p-10">Blog not found</div>
+        fetchBlogData();
+    }, [])
 
     return (
+        data?
         <>
             <div className="bg-gray-200 py-5 px-5 md:px-13 lg:px-28">
                 <div className="text-center my-24">
                     <h1 className="text-2xl sm:text-5xl font-semibold max-w-[700px] mx-auto">
                         {data.title}
                     </h1>
-                    <Image src={data.author_img} className='mx-auto mt-6 border border-white rounded-full' width={60} height={60} alt='' />
+                    <Image src={data.authorImg} className='mx-auto mt-6 border border-white rounded-full' width={60} height={60} alt='' />
                     <p className='mt-1 pb-2 text-lg max-w-[740px] mx-auto'>{data.author}</p>
                 </div>
             </div>
@@ -56,7 +57,10 @@ export default function Page() {
                 </div>
 
             </div>
-        </>
+        </>:<></>
 
     )
 }
+
+
+export default page
