@@ -144,7 +144,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]" />
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 flex-grow flex flex-col justify-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 grow flex flex-col justify-center">
         
         {/* Label */}
         <div className="flex items-center gap-3 mb-6">
