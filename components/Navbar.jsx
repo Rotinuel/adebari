@@ -17,6 +17,7 @@ export default function ContactPage() {
     { label: "HOME", href: "/" },
     { label: "ABOUT", href: "/about" },
     { label: "SERVICES", href: "/services" },
+    { label: "GALLERY", href: "/gallery" },
     { label: "BLOG", href: "/blog" },
     { label: "CONTACT", href: "/contact" },
   ];
@@ -70,7 +71,11 @@ export default function ContactPage() {
               <FiPhoneCall className="text-[#004d61] text-xl" />
               <div>
                 <p className="text-xs text-black">24/7 Phone Services</p>
-                <p className="font-bold text-black">555 666 999 00</p>
+                <p className="font-bold text-black">
+              <Link href="tel:+2349056329716" className="hover:text-white">
+                (234)905-632-9716
+              </Link>
+                </p>
               </div>
             </div>
 

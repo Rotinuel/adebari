@@ -169,7 +169,7 @@ export default function HeroSection() {
         {/* CTA Buttons */}
         <div className="mt-10 flex flex-wrap gap-4">
           <Link
-            href="/projects"
+            href="/gallery"
             className="px-8 py-4 bg-[#55a630] text-white rounded-lg text-lg font-semibold flex items-center gap-2 hover:bg-[#4b952c] transition"
           >
             View Our Projects <ArrowRight size={22} />

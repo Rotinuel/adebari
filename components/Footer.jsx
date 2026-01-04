@@ -26,10 +26,10 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-2">
             <Link href="/" className="text-white text-2xl font-bold">
-              AK
+              Adebari Konsults
             </Link>
             <p className="text-sm">
-              © {new Date().getFullYear()} AK Company. All rights reserved.
+              © {new Date().getFullYear()} Adebari Konsults Company. All rights reserved.
             </p>
           </div>
 
