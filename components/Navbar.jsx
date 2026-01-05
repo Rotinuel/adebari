@@ -83,7 +83,12 @@ export default function ContactPage() {
               <FiMapPin className="text-[#004d61] text-xl" />
               <div>
                 <p className="text-xs text-black">Visit Our Place</p>
-                <p className="font-bold text-black">LG 11209, Nigeria</p>
+                <div className="flex flex-col">
+                <p className="font-bold text-black">Flat 1b, block A,</p>
+                <p className="font-bold text-black">Aspen close, urban prime one estate,</p>
+                <p className="font-bold text-black">ogombo, ajah, Lagos, Nigeria</p>
+                </div>
+
               </div>
             </div>
           </div>
