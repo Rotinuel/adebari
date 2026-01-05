@@ -8,6 +8,11 @@ const nextConfig = {
         port: "",            // optional, leave empty if standard
         pathname: "/**",     // allow all paths
       },
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+        pathname: '/**',
+      },
     ],
   },
   reactCompiler: true,
