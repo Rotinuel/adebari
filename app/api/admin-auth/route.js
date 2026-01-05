@@ -4,7 +4,10 @@ import { NextResponse } from 'next/server';
 export async function POST(req) {
     const { password } = await req.json();
 
-    if (password === 'Ctonia') {
+    // Read password from environment variable
+    const adminPassword = process.env.ADMIN_PASSWORD;
+
+    if (password === adminPassword) {
         const response = NextResponse.json({ success: true });
 
         // Set a cookie that lasts for 15 minutes
