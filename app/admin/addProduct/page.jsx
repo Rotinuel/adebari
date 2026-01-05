@@ -11,6 +11,7 @@ const page = () => {
   const [data, setData] = useState({
     title: "",
     description: "",
+    content: "",
     category: "",
     author: "Adedolapo Samson Ogunleye",
     authorImg: "/author_icon.png",
@@ -28,6 +29,7 @@ const page = () => {
     const formData = new FormData();
     formData.append('title', data.title);
     formData.append('description', data.description);
+    formData.append('content', data.content);
     formData.append('category', data.category);
     formData.append('author', data.author);
     formData.append('authorImg', data.authorImg);
@@ -64,6 +66,17 @@ const page = () => {
 
         <p className="text-xl mt-4">Blog Description</p>
         <textarea type="text" name="description" onChange={onChangeHandler} value={data.description} className="w-full sm:w-[500px] mt-4 px-4 py-3 border" placeholder='write content here' rows={6} required />
+
+        <p className="text-xl mt-4">Main Blog Content</p>
+        <textarea
+          name="content"
+          onChange={onChangeHandler}
+          value={data.content}
+          className="w-full sm:w-[500px] mt-4 px-4 py-3 border"
+          placeholder='Write the full blog post here...'
+          rows={12}
+          required
+        />
 
         <p className="text-xl mt-4">Blog Category</p>
         <select name="category" onChange={onChangeHandler} value={data.category} className='w-60 mt-4 px-4 py-3 border text-gray-500'>

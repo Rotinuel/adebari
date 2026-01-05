@@ -1,17 +1,3 @@
-// import { connectDB } from '../../lib/db'
-// export default async function Gallery() {
-//   const db = await connectDB()
-//   const items = await db.collection('media').find({ type: 'image' }).sort({ createdAt:-1 }).toArray()
-//   return (
-//     <div>
-//       <h2 className="text-2xl font-semibold mb-4">Project Gallery</h2>
-//       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-//         {items.map(i => <img key={i._id} src={i.url} alt={i.caption||'project'} className="w-full h-60 object-cover rounded shadow-sm" />)}
-//       </div>
-//     </div>
-//   )
-// }
-
 "use client"
 import React, { useState, useRef } from 'react';
 import Image from 'next/image';
@@ -20,12 +6,13 @@ import Image from 'next/image';
 
 // 1. DATA STRUCTURE
 const projects = [
-  { id: 1, type: 'image', src: '', title: 'Modern Villa', category: 'Residential' },
-  { id: 2, type: 'video', videoSrc: '', title: 'Olympic Complex 3D', category: 'Sport Complex' }, // Replace with your 3D video path
+  { id: 1, type: 'image', src: '/ak/IMG_6481.png', title: 'Modern Villa', category: 'Residential' },
+  // { id: 2, type: 'video', videoSrc: '', title: 'Olympic Complex 3D', category: 'Sport Complex' }, // Replace with your 3D video path
+  { id: 2, type: 'image', src: '/ak/IMG_1281.PNG', title: 'Olympic Complex 3D', category: 'Sport Complex' }, // Replace with your 3D video path
   { id: 3, type: 'image', src: '', title: 'Tech HQ', category: 'Commercial' },
   { id: 4, type: 'image', src: '', title: 'Aquatic Center', category: 'Sport Complex' },
   { id: 5, type: 'video', videoSrc: '', title: 'Retail Hub Render', category: 'Commercial' },
-  { id: 6, type: 'image', src: '', title: 'Sunset Apartments', category: 'Residential' },
+  { id: 6, type: 'image', src: '/ak/IMG_6490.png', title: 'Sunset Apartments', category: 'Residential' },
 ];
 
 const categories = ['All', 'Residential', 'Sport Complex', 'Commercial'];
