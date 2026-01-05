@@ -16,6 +16,8 @@
 import React, { useState, useRef } from 'react';
 import Image from 'next/image';
 
+
+
 // 1. DATA STRUCTURE
 const projects = [
   { id: 1, type: 'image', src: '', title: 'Modern Villa', category: 'Residential' },
@@ -52,7 +54,7 @@ const VideoCard = ({ src, title }) => {
         playsInline
         className="h-full w-full object-cover"
       />
-      <div className="absolute top-4 right-4 bg-orange-600 text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-tighter">
+      <div className="absolute top-4 right-4 bg-[#ffbb00] text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-tighter">
         Hover to Tour
       </div>
     </div>
@@ -86,8 +88,8 @@ export default function ConstructionGallery() {
               onClick={() => setFilter(cat)}
               className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 border-2 ${
                 filter === cat 
-                  ? 'bg-orange-600 border-orange-600 text-white shadow-lg' 
-                  : 'bg-white border-gray-200 text-gray-600 hover:border-orange-600'
+                  ? 'bg-[#ffbb00] border-[#ffbb00] text-white shadow-lg' 
+                  : 'bg-white border-gray-200 text-gray-600 hover:border-[#ffbb00]'
               }`}
             >
               {cat}

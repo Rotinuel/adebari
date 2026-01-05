@@ -32,6 +32,7 @@ const page = () => {
     formData.append('author', data.author);
     formData.append('authorImg', data.authorImg);
     formData.append('image', image);
+
     const res = await axios.post('/api/blog', formData);
     if (res.data.success) {
       toast.success(res.data.msg)
