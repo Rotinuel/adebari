@@ -29,7 +29,7 @@ export default function HeroSection() {
         <div className="flex items-center gap-3 mb-6">
           <div className="w-10 h-0.5 bg-[#55a630]" />
           <span className="uppercase tracking-widest text-sm text-gray-300">
-            Building Excellence Since 1998
+            Building Excellence Since 2007
           </span>
         </div>
 
