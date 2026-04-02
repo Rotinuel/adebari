@@ -10,8 +10,8 @@ const outfit = Outfit({
 
 
 export const metadata = {
-  title: 'Adebari Consult — Building Structures & Construction',
-  description: 'Adebari Consult specializes in all kinds of building structures — residential, commercial and industrial construction services.',
+  title: 'Adebari Konsults — Building Structures & Construction',
+  description: 'Adebari Konsults specializes in all kinds of building structures — residential, commercial and industrial construction services.',
   openGraph: { title: 'Adebari Consult', description: 'Professional construction and structural engineering', images: ['/og-image.jpg'] }
 }
 
