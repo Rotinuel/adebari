@@ -50,7 +50,7 @@ export default function ContactPage() {
 
           <div className="flex items-center gap-2">
             <FiMail className="text-white" />
-            <span>info@adebariKonsult.com</span>
+            <span>info@adebariKonsults.com</span>
           </div>
 
         </div>
